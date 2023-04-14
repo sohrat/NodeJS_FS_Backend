@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const userSchema = mongoose.Schema({
     //id
     // firstName, lastname, address, city, state, zip, email, password
-    _id: mongoose.SchemaTypes.ObjectId,
+    _id: mongoose.Schema.Types.ObjectId,
     firstName: {
         type: String,
         required: true,
@@ -37,6 +37,5 @@ const userSchema = mongoose.Schema({
         required: true,
     },
 });
-
 
 module.exports =  mongoose.model('User', userSchema);
